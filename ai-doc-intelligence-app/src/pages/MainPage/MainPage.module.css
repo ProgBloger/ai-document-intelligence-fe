@@ -1,0 +1,41 @@
+/* Flex container to align the list and upload containers side by side */
+.container {
+  display: flex;
+  justify-content: space-between; /* Adds spacing between the two containers */
+  align-items: flex-start; /* Align items at the start of the container */
+  padding: 20px;
+}
+
+/* List Container */
+.list-container {
+  width: 50%;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Upload Container */
+.upload-container {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  .list-container, .upload-container {
+    width: 90%; /* Full width on smaller devices */
+    margin-bottom: 20px; /* Add spacing between containers */
+  }
+}
